@@ -1,0 +1,10 @@
+{
+  "id": "hids-siem-fetcher",
+  "name": "HIDS SIEM Fetcher",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Fetch HIDS detection events and alerts from the SIEM Read API into Obsidian notes, and pull the latest events by timestamp.",
+  "author": "HIDS Project",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}

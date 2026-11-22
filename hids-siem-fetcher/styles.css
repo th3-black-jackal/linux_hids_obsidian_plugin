@@ -1,0 +1,152 @@
+/* HIDS SIEM Fetcher — chat view + minimal modal tweaks. */
+
+.modal .setting-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* ---- Chat view ---- */
+.hids-chat-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+}
+
+.hids-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.hids-chat-title {
+  font-weight: 600;
+}
+
+.hids-chat-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hids-chat-scope {
+  max-width: 180px;
+}
+
+.hids-chat-messages {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hids-chat-empty {
+  margin: auto;
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 85%;
+}
+.hids-chat-empty .hids-chat-hint {
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+.hids-chat-msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 92%;
+}
+.hids-chat-user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+.hids-chat-assistant {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.hids-chat-meta {
+  font-size: 0.72em;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+.hids-chat-ctx {
+  opacity: 0.8;
+}
+
+.hids-chat-body {
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: var(--background-secondary);
+  line-height: 1.45;
+  word-break: break-word;
+}
+.hids-chat-user .hids-chat-body {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+.hids-chat-usertext {
+  white-space: pre-wrap;
+}
+
+/* tighten markdown spacing inside bubbles */
+.hids-chat-assistant .hids-chat-body > :first-child { margin-top: 0; }
+.hids-chat-assistant .hids-chat-body > :last-child { margin-bottom: 0; }
+.hids-chat-assistant .hids-chat-body p { margin: 0.4em 0; }
+
+.hids-chat-typing .hids-chat-body {
+  font-style: italic;
+  color: var(--text-muted);
+}
+.hids-chat-error .hids-chat-body {
+  background: var(--background-modifier-error);
+  color: var(--text-error);
+}
+
+.hids-chat-sources {
+  margin-top: 6px;
+  font-size: 0.8em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+.hids-chat-sources-label {
+  color: var(--text-muted);
+}
+.hids-chat-chip {
+  padding: 1px 7px;
+  border-radius: 10px;
+  background: var(--background-modifier-border);
+  color: var(--text-normal);
+  text-decoration: none;
+  white-space: nowrap;
+}
+a.hids-chat-chip:hover {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.hids-chat-composer {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid var(--background-modifier-border);
+  align-items: flex-end;
+}
+.hids-chat-input {
+  flex: 1 1 auto;
+  resize: none;
+  min-height: 38px;
+  max-height: 160px;
+  font-family: inherit;
+}
+.hids-chat-send {
+  flex: 0 0 auto;
+  height: 38px;
+}
